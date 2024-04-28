@@ -10,7 +10,7 @@ public DeliveryService(Subject shop)
     shop.registerObserver(this);
 }
 
-public void update(String string, int number,Map <String, Integer> price,Map<String, Integer> quantity)
+public void update(String string,Map <String, Integer> price,Map<String, Integer> quantity)
 {
     if (price.containsKey(string))
     {

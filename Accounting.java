@@ -24,7 +24,7 @@ public class Accounting implements Observer{
             System.out.println("Неверный пароль");
     }
 
-    public void update(String string,int newOrder,Map <String, Integer> price,Map<String, Integer> quantity){
+    public void update(String string,Map <String, Integer> price,Map<String, Integer> quantity){
         if (string.indexOf(" ") >= 0)
         {
             if(string.substring(0, 6).equals("income"))
@@ -36,7 +36,7 @@ public class Accounting implements Observer{
             if (price.containsKey(string))
         {
             if (quantity.get(string)>0)
-                income += newOrder;
+                income += price.get(string);
         }
             else
                 if (!string.equals("товары")) 

@@ -14,8 +14,8 @@ public class Shop implements Subject {
             obsList.remove(o);  
     }
 
-    public void notifyObservers(String string,int number, Map <String, Integer> price,Map<String, Integer> quantity)
+    public void notifyObservers(String string, Map <String, Integer> price,Map<String, Integer> quantity)
     {
         for (Observer o:obsList)
-            o.update(string,number,price,quantity);        
+            o.update(string,price,quantity);        
     }}

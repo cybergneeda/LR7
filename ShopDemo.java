@@ -48,5 +48,5 @@ public class ShopDemo {
                         number=price.get(string);                      
                     else
                         number=0;          
-                    shop.notifyObservers(string,number,price,quantity);                 
+                    shop.notifyObservers(string,price,quantity);                 
                 }}}}
