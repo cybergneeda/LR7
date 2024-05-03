@@ -3,11 +3,11 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class ShopDemo {
+
     @SuppressWarnings("unused")
     public static void main(String[] args){
         String string;
-        int number;
-
+        
         Map <String, Integer> price = new HashMap<>(); //ценник
         price.put("стол", 10000);
         price.put("шкаф", 50000);
@@ -25,7 +25,7 @@ public class ShopDemo {
         quantity.put("кровать", 2);
 
         Shop shop = new Shop();
-        Accounting acc = Accounting.geAccounting(shop);
+        Accounting acc = Accounting.getAccounting(shop);
         DeliveryService ds = new DeliveryService(shop);
         Warehouse wh = new Warehouse(shop);
         
@@ -43,10 +43,6 @@ public class ShopDemo {
                 scanner.close();
                 break;
             } 
-                else {    
-                    if (price.containsKey(string))                   
-                        number=price.get(string);                      
-                    else
-                        number=0;          
-                    shop.notifyObservers(string,price,quantity);                 
-                }}}}
+            else {            
+                shop.notifyObservers(string,price,quantity);                 
+            }}}}

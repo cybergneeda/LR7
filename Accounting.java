@@ -10,7 +10,7 @@ public class Accounting implements Observer{
         shop.registerObserver(this);
     }
 
-    public static Accounting geAccounting(Subject shop)
+    public static Accounting getAccounting(Subject shop)
     {
         if (uniqueAccounting==null)
             uniqueAccounting=new Accounting(shop);      
